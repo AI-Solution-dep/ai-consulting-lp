@@ -122,6 +122,11 @@
   padding-bottom: 8px;
 }
 
+.editorial-lp .keep-together {
+  display: inline-block;
+  max-width: 100%;
+}
+
 /* Container --------------------------------------------------------------- */
 .editorial-lp .container {
   width: min(var(--container), calc(100% - 48px));
@@ -1282,6 +1287,13 @@
   }
   .editorial-lp .section {
     padding: 60px 0;
+  }
+  .editorial-lp .keep-together {
+    display: inline;
+  }
+  .editorial-lp .hero-title__line {
+    display: inline-block;
+    white-space: nowrap;
   }
 }
 
