@@ -236,7 +236,7 @@
 }
 
 .editorial-lp .hero__copy {
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .editorial-lp .hero__issue {
@@ -264,6 +264,10 @@
 
 .editorial-lp .hero h1 .accent {
   color: var(--accent-red);
+}
+
+.editorial-lp .hero-title__line {
+  white-space: nowrap;
 }
 
 .editorial-lp .hero__lead {
