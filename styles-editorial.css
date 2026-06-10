@@ -129,17 +129,17 @@
 
 /* Container --------------------------------------------------------------- */
 .editorial-lp .container {
-  width: min(var(--container), calc(100% - 48px));
+  width: min(1480px, calc(100% - 80px));
   margin: 0 auto;
 }
 
 .editorial-lp .container--narrow {
-  width: min(var(--container-narrow), calc(100% - 48px));
+  width: min(880px, calc(100% - 80px));
   margin: 0 auto;
 }
 
 .editorial-lp .container--wide {
-  width: min(var(--container-wide), calc(100% - 32px));
+  width: min(1480px, calc(100% - 80px));
   margin: 0 auto;
 }
 
@@ -232,16 +232,16 @@
 }
 
 .editorial-lp .hero__inner {
-  width: min(var(--container-wide), calc(100% - 32px));
+  width: min(1480px, calc(100% - 80px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
   align-items: center;
 }
 
 .editorial-lp .hero__copy {
-  max-width: 600px;
+  max-width: none;
 }
 
 .editorial-lp .hero__issue {
@@ -258,11 +258,11 @@
 }
 
 .editorial-lp .hero h1 {
-  font-family: var(--font-serif-jp);
-  font-weight: 700;
+  font-family: var(--font-sans-jp);
+  font-weight: 900;
   font-size: clamp(2rem, 4.5vw, 3.5rem);
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 32px;
 }
@@ -275,12 +275,22 @@
   white-space: nowrap;
 }
 
+.editorial-lp .hero-title__answer {
+  font-family: var(--font-sans-jp);
+  font-size: 0.62em;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
 .editorial-lp .hero__lead {
   font-family: var(--font-sans-jp);
-  font-size: 1.1rem;
-  color: var(--ink-soft);
-  line-height: 1.95;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 2.2;
   margin-bottom: 24px;
+  border-left: 4px solid var(--accent-red);
+  padding-left: 18px;
 }
 
 .editorial-lp .hero-proof {
@@ -293,13 +303,17 @@
 .editorial-lp .hero-proof span {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
-  padding: 8px 12px;
-  border: 1px solid var(--rule);
-  background: var(--white);
+  gap: 6px;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--muted);
   line-height: 1.5;
+}
+
+.editorial-lp .hero-proof span::before {
+  content: '✓';
+  color: var(--accent-red);
+  font-size: 0.75rem;
 }
 
 .editorial-lp .hero__actions {
@@ -354,13 +368,15 @@
 }
 
 .editorial-lp .hero__caption {
-  font-family: var(--font-serif-en);
-  font-style: italic;
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-top: 14px;
-  padding-left: 12px;
-  border-left: 2px solid var(--accent-red);
+  font-family: var(--font-sans-jp);
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.8;
+  margin-top: 16px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent-red);
 }
 
 /* Outcome / What you get ------------------------------------------------- */
@@ -454,9 +470,15 @@
 .editorial-lp .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 24px;
   border-top: 2px solid var(--ink);
   padding-top: 56px;
+}
+
+.editorial-lp .why-card {
+  background: var(--white);
+  border: 1px solid var(--rule-soft);
+  padding: 32px 20px;
 }
 
 .editorial-lp .why-card .why-card__num {
@@ -471,9 +493,9 @@
 }
 
 .editorial-lp .why-card h3 {
-  font-family: var(--font-serif-jp);
+  font-family: var(--font-sans-jp);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   margin-bottom: 16px;
   color: var(--ink);
@@ -1381,6 +1403,8 @@
 
 /* Hero h1 size bump (gravitas) */
 .editorial-lp .hero h1 {
+  font-family: var(--font-sans-jp);
+  font-weight: 900;
   font-size: clamp(2.3rem, 4.8vw, 4rem);
 }
 
@@ -1423,19 +1447,15 @@
 .editorial-lp .security-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 24px;
   border-top: 2px solid var(--ink);
-  border-bottom: 1px solid var(--rule-soft);
+  padding-top: 40px;
 }
 
 .editorial-lp .security-grid article {
-  padding: 34px 30px;
+  padding: 32px 20px;
   background: var(--white);
-  border-right: 1px solid var(--rule-soft);
-}
-
-.editorial-lp .security-grid article:last-child {
-  border-right: none;
+  border: 1px solid var(--rule-soft);
 }
 
 .editorial-lp .security-grid span {
@@ -1543,7 +1563,10 @@
 .editorial-lp .site-footer__logo {
   height: 32px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: none;
+  background: var(--paper);
+  padding: 4px 10px;
+  border-radius: 4px;
   margin-bottom: 20px;
 }
 
@@ -1620,6 +1643,151 @@
   color: var(--accent-gold);
   border-bottom-color: var(--accent-gold);
 }
+
+/* ==========================================================================
+   PASONA — Problem / Affinity / Narrow-down sections
+   ========================================================================== */
+
+.editorial-lp .problem {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 80px 24px;
+}
+
+.editorial-lp .problem__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.editorial-lp .problem__label {
+  display: block;
+  font-family: var(--font-serif-jp);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  margin-bottom: 28px;
+  border-left: 3px solid var(--accent-red);
+  padding-left: 12px;
+}
+
+.editorial-lp .problem__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editorial-lp .problem__list li {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+  color: rgba(250, 248, 245, 0.85);
+}
+
+.editorial-lp .problem__list li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: var(--accent-red);
+  font-size: 0.8rem;
+  top: 3px;
+}
+
+.editorial-lp .problem__affinity {
+  border-left: 1px solid rgba(250, 248, 245, 0.2);
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editorial-lp .problem__affinity p {
+  font-family: var(--font-serif-jp);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--paper);
+}
+
+.editorial-lp .problem__affinity strong {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.editorial-lp .problem__affinity-sub {
+  font-family: var(--font-sans-jp) !important;
+  font-size: 0.9rem !important;
+  color: rgba(250, 248, 245, 0.6) !important;
+  margin-top: 8px;
+}
+
+.editorial-lp .problem__affinity-cta {
+  font-family: var(--font-sans-jp);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--paper);
+  line-height: 1.6;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--accent-red);
+}
+
+@media (max-width: 768px) {
+  .editorial-lp .problem__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .editorial-lp .problem__affinity {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(250, 248, 245, 0.2);
+    padding-top: 32px;
+  }
+}
+
+/* Narrow-down banner */
+.editorial-lp .narrow-down {
+  background: var(--accent-red);
+  color: var(--paper);
+  text-align: center;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.editorial-lp .narrow-down p {
+  font-family: var(--font-serif-jp);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.editorial-lp .narrow-down strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.editorial-lp .narrow-down .button--primary {
+  background: var(--paper);
+  color: var(--accent-red);
+  border-color: var(--paper);
+}
+
+.editorial-lp .narrow-down .button--primary:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ==========================================================================
+   End PASONA additions
+   ========================================================================== */
 
 .editorial-lp .site-footer__copy {
   margin-top: 30px;
