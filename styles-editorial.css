@@ -590,7 +590,7 @@
   color: var(--paper);
 }
 
-.editorial-lp .saas-card span {
+.editorial-lp .saas-card > span {
   font-family: var(--font-serif-en);
   font-style: italic;
   font-size: 0.78rem;
@@ -600,7 +600,7 @@
   margin-bottom: 16px;
 }
 
-.editorial-lp .saas-card--primary span {
+.editorial-lp .saas-card--primary > span {
   color: var(--accent-gold);
 }
 
