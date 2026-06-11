@@ -88,8 +88,10 @@ ai-consulting-lp/
 |---|---|
 | hero-wipe / hero-rise / hero-img-zoom / header-drop（@keyframes） | globals.css にCSSごと移植 |
 | underline-draw（マーカースイープ） | globals.css に移植 |
-| スクロールリビール（インラインJS + IO） | **採用サイト `FadeIn` に置換**（IO + reduced-motion検知 + 1.2sフォールバック） |
+| スクロールリビール（インラインJS + IO、`data-reveal` 24種 + `--reveal-delay` スタッガー + `data-reveal-img` clip-pathワイプ） | **`PageEffects.tsx`（client component）に現行JSを忠実移植**。tr要素・clip-path画像・マーカースイープとCSSが密結合しているため FadeIn 置換はせず、現行ロジックを維持（FadeIn は ui/ にコピーし Phase 2 以降の新規要素用とする） |
+| スクロール連動の背景色補間（紙色 #FAF8F5 → 生成り #EDE4D3、`--page-bg` を補間） | 同じく `PageEffects.tsx` に忠実移植 |
 | ヒーローパーティクル（インラインJS canvas） | `HeroParticles.tsx` としてReact化（現行ロジックを忠実移植、LP配色維持） |
+| `js-motion` クラス付与（head内インラインJS、reduced-motion時は付与しない） | layout.tsx の `<head>` にインラインscriptとして移植 |
 | reduced-motion ガード | CSS `@media` + JS `matchMedia` の両方を維持 |
 
 ### 2.6 デプロイ
