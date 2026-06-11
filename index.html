@@ -12,6 +12,11 @@
   <meta property="og:image" content="https://ai-solution-dep.github.io/ai-consulting-lp/assets/generated/10-og.png">
   <meta name="twitter:card" content="summary_large_image">
 
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-motion');
+    }
+  </script>
   <link rel="stylesheet" href="./styles-editorial.css">
 
   <script type="application/ld+json">
@@ -568,5 +573,66 @@
   </footer>
 
 </main>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  // [セレクタ, グリッド内スタッガーの有無]
+  var targets = [
+    ['.section-heading', false],
+    ['.outcome-grid > article', true],
+    ['.problem__list li', true],
+    ['.problem__affinity', false],
+    ['.why-card', true],
+    ['.comparison-table-wrap', false],
+    ['.saas-card', true],
+    ['.story', true],
+    ['.program-card', true],
+    ['.timeline > div', true],
+    ['.deliverables-list li', true],
+    ['.deliverables-flow > div', true],
+    ['.narrow-down', false],
+    ['.price-headline > div', true],
+    ['.price-details article', true],
+    ['.layer-card', true],
+    ['.security-grid article', true],
+    ['.faq-item', true],
+    ['.mid-cta', false],
+    ['.cta .container', false]
+  ];
+  targets.forEach(function (t) {
+    var els = document.querySelectorAll(t[0]);
+    for (var i = 0; i < els.length; i++) {
+      els[i].setAttribute('data-reveal', '');
+      if (t[1]) {
+        els[i].style.setProperty('--reveal-delay', (Math.min(i % 6, 5) * 0.1).toFixed(1) + 's');
+      }
+    }
+  });
+
+  // Use Cases の画像はマスクワイプで見せる
+  var imgs = document.querySelectorAll('.story__image');
+  for (var j = 0; j < imgs.length; j++) {
+    imgs[j].setAttribute('data-reveal-img', '');
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        en.target.classList.add('is-visible');
+        // clip-pathで全隠しした子画像は交差判定が効かないため、親の発火に連動させる
+        var clipped = en.target.querySelectorAll('[data-reveal-img]');
+        for (var c = 0; c < clipped.length; c++) clipped[c].classList.add('is-visible');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  var all = document.querySelectorAll('[data-reveal]');
+  for (var k = 0; k < all.length; k++) io.observe(all[k]);
+})();
+</script>
 </body>
 </html>
