@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AIエージェント業務自動化支援｜Google Workspace・kintone・freeeなど業務アプリ連携 | JQIT</title>
-  <meta name="description" content="Google Workspace、kintone、freee、LINE WORKS、Chatwork など、いま使っている業務アプリをそのままに、毎日の手作業を一か月で自動化候補へ落とし込む導入支援。">
+  <title>AI業務自動化支援｜Google Workspace・kintone・freeeなど業務アプリ連携 | JQIT</title>
+  <meta name="description" content="Google Workspace、kintone、freee、LINE WORKS、Chatwork など、いま使っている業務アプリをそのままに、毎日の手作業を一か月で「動く自動化」に変える導入支援。">
 
-  <meta property="og:title" content="AIエージェント業務自動化支援｜JQIT">
+  <meta property="og:title" content="AI業務自動化支援｜JQIT">
   <meta property="og:description" content="Claude / Codex と API・GAS連携で、Google Workspace・kintone・freee など既存SaaSをまたぐ手作業を減らします。">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="./assets/generated/10-og.png">
+  <meta property="og:image" content="https://ai-solution-dep.github.io/ai-consulting-lp/assets/generated/10-og.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="./styles-editorial.css">
@@ -18,7 +18,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AIエージェント業務自動化支援",
+    "name": "AI業務自動化支援",
     "provider": {
       "@type": "Organization",
       "name": "株式会社JQIT",
@@ -37,11 +37,11 @@
         "https://www.instagram.com/jqit202412"
       ]
     },
-    "description": "Claude / Codex と API・MCP・GAS を活用し、Google Workspace、kintone、freee、LINE WORKS、Chatwork など既存SaaSをまたぐ手作業を自動化する一か月導入支援。",
+    "description": "Claude / Codex と API・GAS を活用し、Google Workspace、kintone、freee、LINE WORKS、Chatwork など既存の業務アプリをまたぐ手作業を自動化する一か月導入支援。",
     "areaServed": "JP",
     "offers": [
-      {"@type": "Offer", "name": "業務自動化診断", "price": "200000", "priceCurrency": "JPY", "description": "業務棚卸し、自動化テーマ選定、導入ロードマップ作成"},
-      {"@type": "Offer", "name": "一か月導入パック", "price": "300000", "priceCurrency": "JPY", "description": "一か月、1-3テーマのSaaS連携・GAS/API実装支援"}
+      {"@type": "Offer", "name": "一か月導入パック（初回限定）", "price": "200000", "priceCurrency": "JPY", "description": "一か月、1テーマのGAS/API連携実装と運用ルール整備"},
+      {"@type": "Offer", "name": "一か月導入パック（通常）", "price": "300000", "priceCurrency": "JPY", "description": "一か月、1〜3テーマのアプリ連携・GAS/API実装支援"}
     ]
   }
   </script>
@@ -52,7 +52,7 @@
     "mainEntity": [
       {"@type": "Question", "name": "kintoneやfreeeの運用が整理されていなくても相談できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。既存SaaSの利用状況、権限、API連携可否を確認し、Google WorkspaceやGASを含めて実装しやすい順にテーマを整理します。"}},
       {"@type": "Question", "name": "ITリテラシーが高くない社員でも回せますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。現場担当者には完成した手順と確認ポイントを渡し、難しいAPIやGASの詳細を意識しなくても運用できる形にします。"}},
-      {"@type": "Question", "name": "一か月で終わらせず、その後も支援してもらえますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。一か月導入後、月次顧問契約（月20-50万円〜）で追加テーマ、横展開、改善、社内定着を支援します。"}},
+      {"@type": "Question", "name": "一か月で終わらせず、その後も支援してもらえますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。一か月導入後、月次顧問契約（月20万〜50万円）で追加テーマ、横展開、改善、社内定着を支援します。"}},
       {"@type": "Question", "name": "オンラインだけで進められますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。週1回60分のオンライン定例とチャット/メール質疑で完結します。対面ご希望の場合は別途ご相談ください。"}},
       {"@type": "Question", "name": "業務ヒアリングの前に準備するものはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "最初は使っているSaaSと減らしたい手作業だけで大丈夫です。テーマが未定でも、ヒアリングの中で一緒に見つけます。"}}
     ]
@@ -84,20 +84,17 @@
     <div class="hero__inner">
       <div class="hero__copy">
         <div class="hero__issue">
-          <span>JQIT AI Agent Automation</span>
+          <span>JQIT AI Automation</span>
         </div>
         <h1 id="hero-title"><span class="hero-title__line"><span class="accent">転記・確認・通知、</span></span><br>もう手でやらない。<br><span class="hero-title__answer">それ、AIで<span class="underline-hand">減らせます</span>。</span></h1>
-        <p class="hero__lead">気づいている。この作業、人がやらなくていいはずだと。<br>その感覚は正しい。新しいシステムの導入などはいりません。<br>いまのアプリをそのままに、一か月で自動化候補を整理します。<br>初回3社限定。技術的なことは、すべてこちらが引き受けます。<br><span class="accent">まず30分、話してみてください。</span></p>
-        <div class="hand-note-block">
-          <span class="hand-note hand-note--right">まず手作業を減らす</span>
-        </div>
+        <p class="hero__lead">気づいている。この作業、人がやらなくていいはずだと。<br>その感覚は正しい。新しいシステムの導入などはいりません。<br>いまのアプリをそのままに、一か月で動く自動化のひな形まで作ります。<br>ご相談は月3社まで。技術的なことは、すべてこちらが引き受けます。<br><span class="accent">まず30分、話してみてください。</span></p>
         <div class="hero__actions">
           <a class="button button--primary" href="https://app.spirinc.com/t/kTa-bnVyTbs7FcpoZrWyw/as/q_Tv-81zdFakzX1oEQYDJ/confirm">30分で自動化候補を相談する</a>
           <a class="button button--secondary" href="#stories">自動化例を見る</a>
         </div>
       </div>
       <figure class="hero__visual">
-        <img src="./assets/generated/01-hero.png" alt="経営者とコンサルタントがPC画面でAIを動かしながら業務を再設計している様子" loading="eager" fetchpriority="high">
+        <img src="./assets/generated/01-hero.png" alt="経営者とコンサルタントが同じPC画面を見ながら業務の自動化を検討している様子" loading="eager" fetchpriority="high">
         <figcaption class="hero__caption">問うのは使い方ではなく、減らし方。一か月で、一緒に決めます。</figcaption>
       </figure>
     </div>
@@ -133,16 +130,16 @@
       </h2>
       <div class="outcome-grid">
         <article>
-          <h3><span class="num" aria-hidden="true">01</span>自動化候補を3つ整理</h3>
-          <p>転記、集計、通知、下書きなどから、効果が見えやすく導入しやすいテーマを選びます。</p>
+          <h3><span class="num" aria-hidden="true">01</span>実際に動く自動化のひな形</h3>
+          <p>転記、集計、通知、下書きなど、いま使っているアプリの上でそのまま動く自動化を納品します。</p>
         </article>
         <article>
-          <h3><span class="num" aria-hidden="true">02</span>初回20万円で小さく開始</h3>
-          <p>通常30万円のライト導入を、立ち上げ期の限定価格で始められます。</p>
+          <h3><span class="num" aria-hidden="true">02</span>誰でも回せる手順と運用ルール</h3>
+          <p>AIに任せる範囲と人が確認する範囲を明文化。担当者が変わっても使い続けられます。</p>
         </article>
         <article>
-          <h3><span class="num" aria-hidden="true">03</span>人が確認する運用ルール</h3>
-          <p>送信・登録・会計処理などは人間の承認を挟み、怖くない自動化として始めます。</p>
+          <h3><span class="num" aria-hidden="true">03</span>次に減らす手作業の計画</h3>
+          <p>削減工数と優先順位を整理した自動化テーマ一覧で、2件目以降を社内で進められます。</p>
         </article>
       </div>
     </div>
@@ -152,7 +149,7 @@
     <div class="container">
       <span class="section-num">01 — Why JQIT</span>
       <div class="section-heading">
-        <h2>「自動化まで届く伴走」ができる理由</h2>
+        <h2 id="why-title">「自動化まで届く伴走」ができる理由</h2>
         <p>私たち自身が、同じ手作業を減らしてきました。だから、現場で動く自動化を一緒に作れます。</p>
       </div>
       <div class="why-grid">
@@ -168,7 +165,7 @@
         </article>
         <article class="why-card">
           <span class="why-card__num" aria-hidden="true">03</span>
-          <h3>人間承認を前提に安全に始めます</h3>
+          <h3>人の承認を前提に安全に始めます</h3>
           <p>登録、送信、会計処理、顧客対応などの重要操作は、いきなり全自動にしません。AIの下書きと人の確認を分け、安心して広げられる形にします。</p>
         </article>
       </div>
@@ -179,7 +176,7 @@
     <div class="container">
       <span class="section-num">02 — Comparison</span>
       <div class="section-heading">
-        <h2><span class="keep-together">AI研修</span>との違い</h2>
+        <h2 id="comparison-title"><span class="keep-together">AI研修</span>との違い</h2>
         <p>知識のインプットや単発のQAボットではなく、毎日発生している転記・集計・通知・下書き作成を減らすことをゴールにしています。</p>
       </div>
       <div class="comparison-table-wrap">
@@ -207,14 +204,14 @@
     <div class="container">
       <span class="section-num">03 — App Coverage</span>
       <div class="section-heading">
-        <h2>まずは、<br><span class="marker keep-together">使い慣れたアプリ</span>から</h2>
+        <h2 id="saas-title">まずは、<br><span class="marker keep-together">使い慣れたアプリ</span>から</h2>
         <p>Google Workspace、kintone、freee など、APIやGAS連携の余地があり、現場の手作業が残りやすい領域から始めます。小さく検証し、効果が見えた業務から段階的に広げます。</p>
       </div>
       <div class="saas-grid">
         <article class="saas-card saas-card--primary">
           <span>Core</span>
           <h3>Google Workspace</h3>
-          <p>Gmail、Sheets、Drive、Docs、Calendar、Forms、Apps Script。まず最初の自動化基盤として最有力。</p>
+          <p>Gmail、Sheets、Drive、Docs、Calendar、Forms、Apps Script。最初の自動化基盤として最有力。</p>
         </article>
         <article class="saas-card">
           <span>Database</span>
@@ -224,7 +221,7 @@
         <article class="saas-card">
           <span>Accounting</span>
           <h3>freee / Misoca / board</h3>
-          <p>請求、見積、会計まわり。自動確定ではなく、下書き作成と人間承認から始めます。</p>
+          <p>請求、見積、会計まわり。自動確定ではなく、下書き作成と人の承認から始めます。</p>
         </article>
         <article class="saas-card">
           <span>Chat</span>
@@ -249,12 +246,12 @@
     <div class="container">
       <span class="section-num">04 — Use Cases</span>
       <div class="section-heading">
-        <h2>最初に売りやすい<br>自動化テーマ<span class="marker">5選</span></h2>
-        <p>チャットボット単体より、工数削減が見えやすいテーマを優先します。実績化しやすい小さな成功から横展開します。</p>
+        <h2 id="stories-title">最初に効果が出やすい<br>自動化テーマ<span class="marker">5選</span></h2>
+        <p>チャットボット単体より、工数削減が見えやすいテーマを優先します。小さな成功を作ってから、他の業務へ横展開します。</p>
       </div>
       <div class="stories-grid">
         <article class="story">
-          <div class="story__image story__image--filtered"><img src="./assets/generated/02-skill-library.png" alt="業務スキルがAIエージェントとしてパッケージ化されるイメージ" loading="lazy"></div>
+          <div class="story__image story__image--filtered"><img src="./assets/generated/02-skill-library.png" alt="散らばった業務データが自動で整理されていくイメージイラスト" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 01</span>
             <h3>Google Sheets起点の<br>転記・集計自動化</h3>
@@ -263,7 +260,7 @@
           </div>
         </article>
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/03-management.png" alt="経営者が試算表をAIで分析している様子" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/03-management.png" alt="請求書や試算表を手作業で確認している経理担当者" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 02</span>
             <h3>見積・請求・会計の<br>下書き作成</h3>
@@ -272,7 +269,7 @@
           </div>
         </article>
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/04-matching.png" alt="ホワイトボードでマッチングを整理する営業担当" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/04-matching.png" alt="ホワイトボードで案件・台帳情報を整理する担当者" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 03</span>
             <h3>kintone台帳の<br>登録・更新・通知</h3>
@@ -281,7 +278,7 @@
           </div>
         </article>
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/05-evaluation.png" alt="書類を評価する人事担当の手元" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/05-evaluation.png" alt="デスクで書類を確認しながら承認作業を進める担当者の手元" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 04</span>
             <h3>LINE WORKS / Chatwork<br>通知・承認フロー</h3>
@@ -290,7 +287,7 @@
           </div>
         </article>
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/06-meeting-knowledge.png" alt="会議室のテーブルとICレコーダー" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/06-meeting-knowledge.png" alt="チームが問い合わせ対応の文面を検討している会議の様子" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 05</span>
             <h3>EC・問い合わせ対応の<br>下書き支援</h3>
@@ -312,7 +309,7 @@
     <div class="container">
       <span class="section-num">05 — Program</span>
       <div class="section-heading">
-        <h2>一か月導入パックの内容</h2>
+        <h2 id="program-title">一か月導入パックの内容</h2>
         <p>週1回の定例とチャット/メール質疑で、対象テーマを実務で試せる自動化に落とし込みます。</p>
       </div>
       <div class="program-grid">
@@ -334,7 +331,7 @@
         <article class="program-card">
           <span class="program-card__tag">Asset</span>
           <h3>連携ひな形の資産化</h3>
-          <p>GAS、API連携、AI手順、プロンプトを、貴社で管理可能な形で納品します。</p>
+          <p>GAS（Googleのアプリを自動で動かす仕組み）、API連携、AI手順、プロンプトを、貴社で管理可能な形で納品します。</p>
         </article>
       </div>
       <div class="timeline">
@@ -352,14 +349,14 @@
       <div class="deliverables-layout">
         <div>
           <div class="section-heading">
-            <h2>納品物</h2>
+            <h2 id="deliverables-title">納品物</h2>
             <p>一か月で作った自動化の考え方と実装を、貴社の資産として残します。担当者だけの経験で終わらせず、社内で再利用・横展開できる形にします。</p>
           </div>
           <ul class="deliverables-list">
             <li><div><strong>業務自動化テーマ一覧</strong><span>削減工数、実装難易度、リスク、優先順位を整理したロードマップ。</span></div></li>
             <li><div><strong>GAS・API連携ひな形</strong><span>プログラム中に作成したApps Script、スクリプト、Webhook、連携手順。</span></div></li>
             <li><div><strong>AIエージェント手順書</strong><span>Claude / Codex に任せる作業、入力情報、出力形式、確認観点を明文化。</span></div></li>
-            <li><div><strong>運用ルール・権限設計メモ</strong><span>人間承認、ログ、例外対応、情報の扱い方を整理。</span></div></li>
+            <li><div><strong>運用ルール・権限設計メモ</strong><span>人の承認、ログ、例外対応、情報の扱い方を整理。</span></div></li>
             <li><div><strong>横展開計画書</strong><span>他部門・他業務への展開候補と次の検証テーマを整理。</span></div></li>
           </ul>
         </div>
@@ -394,8 +391,8 @@
       <span class="section-num">07 — Price</span>
       <div class="price-headline">
         <div>
-          <h2>一か月導入パック<br><span class="accent keep-together">初回限定20万円〜</span>。</h2>
-          <p>通常30万円〜のライト導入を、新規事業立ち上げ期の限定価格で提供します。まずは対象テーマを1〜3つに絞り、現場で試せる自動化と運用ルールを作ります。</p>
+          <h2 id="price-title">一か月導入パック<br><span class="accent">初回限定<span class="nowrap">20万円〜</span></span>。</h2>
+          <p>通常30万円〜のライト導入を、サービス開始記念の限定価格で提供します。まずは対象テーマを1〜3つに絞り、現場で試せる自動化と運用ルールを作ります。</p>
         </div>
         <article class="price-card" aria-label="価格">
           <span class="price-card__label">初回限定 / 一か月導入 / 税別</span>
@@ -412,7 +409,7 @@
         </article>
         <article>
           <h3>ライト 通常 ¥300,000〜</h3>
-          <p>実装前の棚卸し、アプリ連携の可否、削減工数の仮説を整理し、優先テーマとロードマップまで作ります。</p>
+          <p>初回限定と同じ内容の通常価格です。1テーマの業務棚卸しから実装、運用ルール整備、横展開計画までを含みます。</p>
         </article>
         <article>
           <h3>標準・拡張 <span class="keep-together">¥500,000〜800,000</span></h3>
@@ -430,7 +427,7 @@
     <div class="container">
       <span class="section-num">08 — Next Step</span>
       <div class="section-heading">
-        <h2>小さく始めて、<br>効果が見えた業務から広げます</h2>
+        <h2 id="next-title">小さく始めて、<br>効果が見えた業務から広げます</h2>
         <p>最初から大きなDX構想にしません。1つの手作業を減らし、削減工数と現場の反応を見て、次の自動化テーマへ進みます。</p>
       </div>
       <div class="layers">
@@ -451,7 +448,7 @@
             <li>継続的改善と追加テーマ実装</li>
             <li>部門横展開の伴走</li>
             <li>権限、ログ、承認フローの整備</li>
-            <li>月 ¥200,000〜500,000〜</li>
+            <li>月 ¥200,000〜500,000</li>
           </ul>
         </article>
         <article class="layer-card layer-card--final">
@@ -472,7 +469,7 @@
     <div class="container">
       <span class="section-num">09 — Security</span>
       <div class="section-heading">
-        <h2>勝手に送信・登録しない。<br><span class="keep-together">人が確認できるAI自動化</span>。</h2>
+        <h2 id="security-title">勝手に送信・登録しない。<br><span class="keep-together">人が確認できるAI自動化</span>。</h2>
         <p>freee、kintone、Google Drive、顧客情報を扱うからこそ、便利さより先に権限・ログ・承認の設計を置きます。</p>
       </div>
       <div class="security-grid">
@@ -483,7 +480,7 @@
         </article>
         <article>
           <span>02</span>
-          <h3>人間承認</h3>
+          <h3>人の承認</h3>
           <p>送信、登録、会計処理などの重要操作は、AIの下書き後に人が確認する前提で設計します。</p>
         </article>
         <article>
@@ -499,7 +496,7 @@
     <div class="container container--narrow">
       <span class="section-num">10 — FAQ</span>
       <div class="section-heading">
-        <h2>よくあるご質問</h2>
+        <h2 id="faq-title">よくあるご質問</h2>
         <p>ご相談前に多くいただく質問にお答えします。</p>
       </div>
       <div class="faq-list">
@@ -509,11 +506,11 @@
         </details>
         <details class="faq-item">
           <summary>ITリテラシーが高くない社員でも回せますか？</summary>
-          <p class="faq-item__answer">はい。現場担当者には完成した手順と確認ポイントを渡し、APIやGASの詳細を意識しなくても運用できる形にします。重要な登録・送信・会計処理は、人間承認を挟む設計にします。</p>
+          <p class="faq-item__answer">はい。現場担当者には完成した手順と確認ポイントを渡し、APIやGASの詳細を意識しなくても運用できる形にします。重要な登録・送信・会計処理は、人の承認を挟む設計にします。</p>
         </details>
         <details class="faq-item">
           <summary>一か月で終わらせず、その後も支援してもらえますか？</summary>
-          <p class="faq-item__answer">はい。一か月導入後、月次顧問契約（月20〜50万円〜）に移行いただけます。追加テーマ、横展開、改善、権限・ログ・承認フローの整備をご提供します。一か月で終わる契約も選択可能です。</p>
+          <p class="faq-item__answer">はい。一か月導入後、月次顧問契約（月20万〜50万円）に移行いただけます。追加テーマ、横展開、改善、権限・ログ・承認フローの整備をご提供します。一か月で終わる契約も選択可能です。</p>
         </details>
         <details class="faq-item">
           <summary>オンラインだけで進められますか？</summary>
@@ -525,7 +522,7 @@
         </details>
         <details class="faq-item">
           <summary>社外秘データや個人情報をAIに渡すのが不安です。</summary>
-          <p class="faq-item__answer">扱う情報、AIに渡す範囲、操作権限を最初に整理します。初期導入では、下書き作成・候補提示・通知などから始め、送信・登録・会計処理は人間承認を挟む設計にします。</p>
+          <p class="faq-item__answer">扱う情報、AIに渡す範囲、操作権限を最初に整理します。初期導入では、下書き作成・候補提示・通知などから始め、送信・登録・会計処理は人の承認を挟む設計にします。</p>
         </details>
       </div>
     </div>
@@ -539,7 +536,7 @@
       <ul class="cta-checklist" aria-label="無料相談で整理すること">
         <li>使っているアプリと手作業の棚卸し</li>
         <li>一か月で試せる自動化候補</li>
-        <li>人間承認が必要な操作範囲</li>
+        <li>人の承認が必要な操作範囲</li>
       </ul>
       <a class="button button--primary" href="https://app.spirinc.com/t/kTa-bnVyTbs7FcpoZrWyw/as/q_Tv-81zdFakzX1oEQYDJ/confirm">自動化候補を相談する</a>
       <p class="cta__tel">またはお電話で：<a href="tel:0364335383">03-6433-5383</a>（平日 10:00-18:00）</p>

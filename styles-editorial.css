@@ -127,6 +127,10 @@
   max-width: 100%;
 }
 
+.editorial-lp .nowrap {
+  white-space: nowrap;
+}
+
 /* Container --------------------------------------------------------------- */
 .editorial-lp .container {
   width: min(1480px, calc(100% - 80px));
