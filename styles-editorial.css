@@ -33,7 +33,7 @@
   --container-wide: 1320px;
 
   margin: 0;
-  background: var(--paper);
+  background: var(--page-bg, var(--paper));
   color: var(--ink);
   font-family: var(--font-sans-jp);
   font-weight: 400;
@@ -1938,5 +1938,27 @@
   /* 比較表の行はtransformを使わずフェードのみ（table-row対策） */
   .editorial-lp tr[data-reveal] {
     transform: none;
+  }
+}
+
+
+/* Hero Particles & Scroll Color ------------------------------------------- */
+.editorial-lp .hero {
+  position: relative;
+  overflow: hidden;
+}
+.editorial-lp .hero__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.editorial-lp .hero__inner {
+  position: relative;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .editorial-lp {
+    transition: background-color 0.25s linear;
   }
 }
