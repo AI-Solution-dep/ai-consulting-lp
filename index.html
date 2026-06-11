@@ -46,7 +46,7 @@
     "areaServed": "JP",
     "offers": [
       {"@type": "Offer", "name": "一か月導入パック（初回限定）", "price": "200000", "priceCurrency": "JPY", "description": "一か月、1テーマのGAS/API連携実装と運用ルール整備"},
-      {"@type": "Offer", "name": "一か月導入パック（通常）", "price": "300000", "priceCurrency": "JPY", "description": "一か月、1〜3テーマのアプリ連携・GAS/API実装支援"}
+      {"@type": "Offer", "name": "一か月導入パック（通常）", "price": "300000", "priceCurrency": "JPY", "description": "一か月、1テーマのアプリ連携・GAS/API実装支援。複数テーマは標準・拡張プランで対応"}
     ]
   }
   </script>
@@ -256,7 +256,7 @@
       </div>
       <div class="stories-grid">
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/02-skill-library.png" alt="紙の帳票を整理しながら転記作業を進める担当者の手元" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/02-skill-library.png" alt="積み上がった帳票に付箋を貼りながら整理する担当者" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 01</span>
             <h3>Google Sheets起点の<br>転記・集計自動化</h3>
@@ -274,7 +274,7 @@
           </div>
         </article>
         <article class="story">
-          <div class="story__image"><img src="./assets/generated/04-matching.png" alt="ホワイトボードで案件・台帳情報を整理する担当者" loading="lazy"></div>
+          <div class="story__image"><img src="./assets/generated/04-matching.png" alt="ガラスボードに付箋を貼りながら案件・台帳情報を整理する担当者" loading="lazy"></div>
           <div class="story__body">
             <span class="story__num">Theme 03</span>
             <h3>kintone台帳の<br>登録・更新・通知</h3>
@@ -403,7 +403,7 @@
           <span class="price-card__label">初回限定 / 一か月導入 / 税別</span>
           <span class="price-card__original">通常 ¥300,000〜</span>
           <strong class="price-card__amount">¥200,000<small>〜</small></strong>
-          <p class="price-card__meta">一か月 / 週1回60分×4回 / チャット・メール質疑 / 対象テーマ1〜3つ</p>
+          <p class="price-card__meta">一か月 / 週1回60分×4回 / チャット・メール質疑 / 対象テーマ1つ</p>
           <small class="price-card__note">限定価格は初回ライト導入が対象。連携範囲により通常 ¥800,000 程度まで</small>
         </article>
       </div>
@@ -632,7 +632,7 @@
         io.unobserve(en.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px 0px 0px' });
 
   var all = document.querySelectorAll('[data-reveal]');
   for (var k = 0; k < all.length; k++) io.observe(all[k]);

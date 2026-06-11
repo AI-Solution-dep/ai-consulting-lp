@@ -1840,6 +1840,7 @@
   .editorial-lp [data-reveal].is-visible {
     opacity: 1;
     transform: none;
+    will-change: auto;
   }
 
   /* 画像のマスクワイプ＋ズームアウト */
@@ -1869,7 +1870,6 @@
   html.js-motion .editorial-lp .hero__copy h1 { animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
   html.js-motion .editorial-lp .hero__lead { animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both; }
   html.js-motion .editorial-lp .hero__actions { animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.56s both; }
-  html.js-motion .editorial-lp .hero__visual { animation: hero-rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both; }
 
   /* カードのホバー浮き上がり */
   .editorial-lp .why-card,
@@ -1910,10 +1910,10 @@
     to { transform: scale(1); }
   }
   html.js-motion .editorial-lp .hero__visual {
-    animation: hero-wipe 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.5s both;
+    animation: hero-wipe 1s cubic-bezier(0.77, 0, 0.175, 1) 0.15s both;
   }
   html.js-motion .editorial-lp .hero__visual img {
-    animation: hero-img-zoom 1.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+    animation: hero-img-zoom 1.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
   }
 
   /* ヒーロー見出しの赤い手書き下線が左から描かれる */
