@@ -4,6 +4,9 @@ import PageEffects from "@/components/PageEffects";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
 import OutcomeStrip from "@/components/sections/OutcomeStrip";
+import Why from "@/components/sections/Why";
+import Comparison from "@/components/sections/Comparison";
+import Saas from "@/components/sections/Saas";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
         <Hero />
         <Problem />
         <OutcomeStrip />
+        <Why />
+        <Comparison />
+        <Saas />
       </main>
       <SiteFooter />
       <PageEffects />
