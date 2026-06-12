@@ -77,9 +77,9 @@ export default function PageEffects() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const stops: Array<[number, [number, number, number]]> = [
-      [0.0, [250, 248, 245]], // --paper #FAF8F5
-      [0.45, [246, 239, 228]], // 中間の温かい紙色
-      [1.0, [237, 228, 211]], // 深い生成り #EDE4D3
+      [0.0, [255, 255, 255]], // --paper #FFFFFF（モダンスキン: 暖色ティント→ごく薄いニュートラル）
+      [0.45, [250, 250, 249]],
+      [1.0, [244, 244, 242]],
     ];
     const body = document.body;
     let ticking = false;

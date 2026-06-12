@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Libre_Bodoni, Public_Sans, Noto_Serif_JP, Noto_Sans_JP, Caveat } from "next/font/google";
+import { Public_Sans, Noto_Serif_JP, Noto_Sans_JP, Caveat } from "next/font/google";
 import "./globals.css";
 
-const libreBodoni = Libre_Bodoni({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-libre-bodoni",
-  display: "swap",
-});
 const publicSans = Public_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -104,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ja"
-      className={`${libreBodoni.variable} ${publicSans.variable} ${notoSerifJP.variable} ${notoSansJP.variable} ${caveat.variable}`}
+      className={`${publicSans.variable} ${notoSerifJP.variable} ${notoSansJP.variable} ${caveat.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: motionScript }} />

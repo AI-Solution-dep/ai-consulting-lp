@@ -9,15 +9,15 @@
   --color-ink: #0F0F10;
   --color-body: #2A2A2D;
   --color-muted: #6B6B70;
-  --color-line: #D8D2C7;
-  --color-paper: #FAF8F5;
-  --color-cream: #F2EDE4;
-  --color-gold: #B08D57;
+  --color-line: #E8E6E2;
+  --color-paper: #FFFFFF;
+  --color-cream: #F6F6F4;
+  --color-gold: #8A8A8E; /* モダンスキン: 金→ニュートラルグレー */
 
   --font-serif: var(--font-noto-serif-jp), "Noto Serif JP", serif;
   --font-sans: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   --font-mono: var(--font-public-sans), "Public Sans", sans-serif;
-  --font-display: var(--font-libre-bodoni), "Libre Bodoni", serif;
+  --font-display: var(--font-public-sans), "Public Sans", sans-serif;
 
   --radius-card: 2px;
 }
@@ -55,13 +55,13 @@
 .editorial-lp {
   --ink: #0F0F10;
   --ink-soft: #2A2A2D;
-  --paper: #FAF8F5;
-  --paper-warm: #F2EDE4;
+  --paper: #FFFFFF; /* モダンスキン: 生成り→白 */
+  --paper-warm: #F6F6F4;
   --rule: #0F0F10;
-  --rule-soft: #D8D2C7;
+  --rule-soft: #E8E6E2;
   --accent-red: #E60012;
   --accent-red-deep: #B3000E;
-  --accent-gold: #B08D57;
+  --accent-gold: #8A8A8E; /* モダンスキン: 金→ニュートラルグレー（ホテル感の排除） */
   --muted: #6B6B70;
   --white: #FFFFFF;
   --shadow-sm: 0 1px 2px rgba(15, 15, 16, 0.04);
@@ -71,7 +71,7 @@
   --card-radius: 12px;
   --shadow-card: 0 1px 2px rgba(15, 15, 16, 0.04), 0 8px 24px rgba(15, 15, 16, 0.05);
 
-  --font-serif-en: var(--font-libre-bodoni), 'Noto Serif JP', serif;
+  --font-serif-en: var(--font-public-sans), 'Noto Sans JP', sans-serif; /* モダンスキン: 英字ラベルを Bodoni→Public Sans に一括変更 */
   --font-sans-en: var(--font-public-sans), 'Noto Sans JP', sans-serif;
   --font-serif-jp: var(--font-noto-serif-jp), serif;
   --font-sans-jp: var(--font-noto-sans-jp), sans-serif;
@@ -236,7 +236,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 248, 245, 0.94);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--rule-soft);
 }
@@ -2112,4 +2112,79 @@
 }
 .editorial-lp .program-card:hover .num-bg {
   color: rgba(230, 0, 18, 0.12);
+}
+
+/* ==========================================================================
+   Modern skin (2026-06-12) — 白地 × 太サンズ見出し × 大文字英字ラベル。
+   ユーザー要望「モダンで先進的、かつ親しみやすい」。
+   親しみ要素は維持: 丸カード・人物写真・underline-hand・Caveat hand-note・
+   黒帯セクションのセリフ文（problem__affinity / mid-cta / narrow-down / footer tagline）
+   ========================================================================== */
+
+/* 見出し: 明朝 → 太ゴシック */
+.editorial-lp .section-heading h2,
+.editorial-lp .outcome-strip h2,
+.editorial-lp .outcome-grid article h3,
+.editorial-lp .price-headline h2,
+.editorial-lp .cta h2,
+.editorial-lp .saas-card h3,
+.editorial-lp .story h3,
+.editorial-lp .program-card h3,
+.editorial-lp .timeline strong,
+.editorial-lp .deliverables-list strong,
+.editorial-lp .deliverables-flow strong,
+.editorial-lp .price-details article h3,
+.editorial-lp .layer-card h3,
+.editorial-lp .layer-card ul li:last-child,
+.editorial-lp .faq-item summary,
+.editorial-lp .security-grid h3,
+.editorial-lp .comparison-table thead th,
+.editorial-lp .comparison-table tbody th {
+  font-family: var(--font-sans-jp);
+  font-weight: 700;
+}
+
+.editorial-lp .section-heading h2,
+.editorial-lp .outcome-strip h2,
+.editorial-lp .price-headline h2,
+.editorial-lp .cta h2 {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+/* 英字ラベル: イタリック → 正体・大文字（採用サイトの mono ラベルと同じ作法） */
+.editorial-lp .section-num,
+.editorial-lp .eyebrow,
+.editorial-lp .hero__issue,
+.editorial-lp .outcome-strip h2 small,
+.editorial-lp .outcome-grid article h3 .num,
+.editorial-lp .saas-card > span,
+.editorial-lp .story__num,
+.editorial-lp .program-card__tag,
+.editorial-lp .timeline span,
+.editorial-lp .deliverables-flow span,
+.editorial-lp .price-card__label,
+.editorial-lp .price-card__original,
+.editorial-lp .price-card__note,
+.editorial-lp .layer-card__num,
+.editorial-lp .layer-card h3 small,
+.editorial-lp .faq-item summary::before,
+.editorial-lp .faq-item summary::after,
+.editorial-lp .faq-item__answer::before,
+.editorial-lp .cta__eyebrow,
+.editorial-lp .cta__tel a,
+.editorial-lp .security-grid span,
+.editorial-lp .site-footer__info dt,
+.editorial-lp .site-footer__social span,
+.editorial-lp .site-footer__social a,
+.editorial-lp .num-bg {
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* 特長カードの番号: 巨大な赤/金 → 控えめなグレー数字 */
+.editorial-lp .why-card .why-card__num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #D4D4D8;
 }
