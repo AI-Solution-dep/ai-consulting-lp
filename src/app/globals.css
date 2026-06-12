@@ -2188,3 +2188,91 @@
   font-weight: 700;
   color: #D4D4D8;
 }
+
+/* 比較表: JQIT列を主役に（どちらが良いかを一目で伝える） ------------------- */
+.editorial-lp .comparison-table thead th:nth-child(2) {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.editorial-lp .comparison-table tbody td:first-of-type {
+  color: var(--muted);
+}
+
+.editorial-lp .comparison-table tbody td:last-child {
+  background: rgba(230, 0, 18, 0.035);
+  border-left: 2px solid var(--accent-red);
+}
+
+@media (min-width: 961px) {
+  /* モバイルは td::before を data-label 表示に使うため、✓はPCのみ */
+  .editorial-lp .comparison-table tbody td:last-child::before {
+    content: "✓";
+    color: var(--accent-red);
+    font-weight: 700;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 960px) {
+  .editorial-lp .comparison-table tr {
+    border-color: var(--rule-soft);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+  .editorial-lp .comparison-table tbody th {
+    border-bottom-color: var(--rule-soft);
+  }
+  .editorial-lp .comparison-table tbody td:first-of-type::before {
+    color: var(--muted);
+  }
+}
+
+/* 対応アプリのテキストマーキー（情報を運ぶモーション） --------------------- */
+.editorial-lp .app-marquee {
+  overflow: hidden;
+  margin: 8px 0 48px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.editorial-lp .app-marquee__track {
+  display: flex;
+  width: max-content;
+}
+
+.editorial-lp .app-marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+  white-space: nowrap;
+}
+
+.editorial-lp .app-marquee__group span {
+  font-family: var(--font-sans-en);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .editorial-lp .app-marquee__track {
+    animation: app-marquee-scroll 36s linear infinite;
+  }
+}
+
+@keyframes app-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 960px) {
+  /* モバイル比較カードの列ラベルもモダンスキンに合わせてサンズ化 */
+  .editorial-lp .comparison-table tbody td::before {
+    font-family: var(--font-sans-jp);
+  }
+}

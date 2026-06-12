@@ -1,3 +1,21 @@
+const MARQUEE_APPS = [
+  "Google Workspace",
+  "kintone",
+  "freee",
+  "Misoca",
+  "board",
+  "LINE WORKS",
+  "Chatwork",
+  "Slack",
+  "Shopify",
+  "BASE",
+  "STORES",
+  "HubSpot",
+  "Salesforce",
+  "SmartHR",
+  "Sansan",
+];
+
 export default function Saas() {
   return (
     <section className="section" id="saas" aria-labelledby="saas-title">
@@ -6,6 +24,18 @@ export default function Saas() {
         <div className="section-heading">
           <h2 id="saas-title">効果が見えたら、<br /><span className="marker keep-together">ここまで広げられます</span></h2>
           <p>最初の一か月は、PCの中で完結するテーマから始めます。効果が確認できたら、Google Workspace、kintone、freee など、いま使っている業務アプリをまたぐ自動化へ段階的に広げます。</p>
+        </div>
+        {/* テキストマーキー: 対応サービス名のみ（ロゴ画像は各社ブランドガイドライン確認まで使わない） */}
+        <div className="app-marquee" aria-hidden="true">
+          <div className="app-marquee__track">
+            {[0, 1].map((i) => (
+              <div className="app-marquee__group" key={i}>
+                {MARQUEE_APPS.map((name) => (
+                  <span key={name}>{name}</span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         <div className="saas-grid">
           <article className="saas-card saas-card--primary">
