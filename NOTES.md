@@ -2,13 +2,16 @@
 
 ## ファイル履歴
 
-| バージョン | 概要 |
+旧静的HTML版（index.html 〜 index-v5.html）は git 履歴（コミット `3f38cfc` 以前）を参照。  
+現在の実装は Next.js（`src/` 以下）に移行済み。
+
+| 旧バージョン | 概要 |
 |---|---|
 | index.html | 初版（業務改善伴走支援、D2C寄り） |
 | index-v2.html | AI実装伴走プログラム初版（自社6部署を前面に） |
 | index-v3.html | レビュー反映：自社主張後退・Tools/Operations削除・FAQ追加・Layer階段強化 |
 | index-v4.html | 再レビュー反映：Hero copy改善・Why JQIT 第1カードに自社実証ファクト復活・JSON-LD整合 |
-| **index-v5.html** | **現行版。CTAをSpirのカレンダー予約に置換（要URL設定）** |
+| index-v5.html | 最終静的版。CTAをSpirのカレンダー予約に置換済み |
 
 ## Spir設定手順（要対応）
 
@@ -46,18 +49,16 @@ Spir設定画面でGoogleカレンダー連携
 
 ### 6. LPに反映
 
-`index-v5.html` 内の `YOUR_SPIR_LINK_HERE` を、取得したSpir URLに置換する。
+Spir URLは Next.js 移植済み。CTAボタンのリンクは以下のコンポーネントで管理している。
 
-```bash
-# 例
-sed -i '' 's|https://app.spirinc.com/YOUR_SPIR_LINK_HERE|<取得した実URL>|g' index-v5.html
-```
+| 配置場所 | コンポーネント |
+|---|---|
+| nav「相談する」 | `src/components/layout/SiteHeader.tsx` |
+| hero CTA | `src/components/sections/Hero.tsx` |
+| 中間CTA | `src/components/sections/MidCta.tsx` |
+| ラストCTA | `src/components/sections/FinalCta.tsx` |
 
-3か所すべて置換される（nav / hero CTA / ラストCTA）。
-
-## 旧バージョンの扱い
-
-実運用に入る前に `index-v5.html` を `index.html` にリネームし、旧版はバックアップフォルダ等に移動することを推奨。
+URLを変更する場合は上記コンポーネント内の `href` を更新する。
 
 ## 残対応（B群オプション）
 

@@ -1,74 +1,108 @@
-# AI導入コンサル / AI実装伴走 LP
+# AI導入コンサル LP
 
-> 管理場所: `08-プロダクト/AI導入コンサル`
-> 移管日: 2026-06-03
-> 移管元: `/Users/takahiromiyamoto/Documents/New project 2/ai-training-lp/`
+JQIT AI業務自動化支援サービスのランディングページ。  
+Next.js 16 + TypeScript + Tailwind CSS v4 で実装し、GitHub Pages に公開する。
 
-このフォルダを、AI導入コンサル / AI実装伴走LPの管理場所とする。
-
-## 現行ファイル
-
-| ファイル | 位置づけ |
-|---|---|
-| `index-v5.html` | `NOTES.md` 上の現行版。CTAをSpir予約URLに置換して使う想定 |
-| `index-editorial.html` | 最終更新が一番新しい編集版。見せ方・コピー確認用 |
-| `index.html` | 初版。業務改善伴走支援寄りの汎用版 |
-| `styles.css` | `index.html` / `index-v2.html` 〜 `index-v5.html` 用 |
-| `styles-editorial.css` | `index-editorial.html` 用 |
-| `NOTES.md` | バージョン履歴、Spir設定、残対応 |
-
-公開前は、`index-v5.html` と `index-editorial.html` を見比べ、採用版を `index.html` に差し替える。
+公開URL: https://ai-solution-dep.github.io/ai-consulting-lp/
 
 ---
 
-# 業務改善伴走支援サービスページ
+## 技術構成
 
-JQITのHPに掲載する汎用的な新規サービスページです。非IT企業、中小企業、バックオフィス、営業、CS、制作、管理部門などに向けて、1か月で対象テーマを1つに絞り、手順化・テンプレート化・運用整理まで伴走する内容にしています。価格は初回限定200,000円（税別）、通常価格300,000円（税別）です。
+| 項目 | 内容 |
+|---|---|
+| フレームワーク | Next.js 16（App Router） |
+| 言語 | TypeScript |
+| スタイル | Tailwind CSS v4（@theme トークンのみ、preflight不使用） |
+| フォント | next/font（Noto Sans JP / Inter / Playfair Display / Montserrat / DM Sans）5書体 |
+| ビルド | 静的書き出し（`output: export`） |
+| デプロイ先 | GitHub Pages（actions/deploy-pages） |
 
-## 単体リンク方法
+デザインは旧 `styles-editorial.css` のトークン・タイポグラフィを `src/app/globals.css` に継承。
 
-このページは `index.html`、`styles.css`、`assets/logo.png` で表示できます。ロゴ以外の画像は現在のHTMLでは表示していません。
+---
 
-単体で確認する場合は、以下をブラウザで開きます。
+## 開発コマンド
 
-```text
-ai-training-lp/index.html
+```bash
+npm install
+
+# 開発サーバー（http://localhost:3000）
+npm run dev
+
+# 静的ビルド — ベースパスなし（ローカル検証用）
+npm run build:static
+npx serve out   # out/ をローカル確認
+
+# 静的ビルド — GitHub Pages 用（basePath=/ai-consulting-lp 付き）
+npm run build:pages
 ```
 
-Webサイト内からリンクする場合は、LPディレクトリへの相対パスまたは公開URLを指定してください。
+> 環境変数のインライン記法（`BUILD_STATIC=true ...`）は macOS/Linux 専用。  
+> このプロジェクトは macOS ローカル + GitHub Actions（ubuntu）のみを対象とする。
 
-```html
-<a href="/ai-training-lp/">業務改善伴走支援を見る</a>
+---
+
+## デプロイ
+
+main ブランチへ push すると GitHub Actions が自動実行する。
+
+1. `npm run build:pages`（`basePath=/ai-consulting-lp` 付きビルド）
+2. `actions/deploy-pages` で `out/` を GitHub Pages に公開
+
+詳細は `.github/workflows/deploy.yml` を参照。
+
+---
+
+## ロールバック手順
+
+Next.js 化以前の旧静的HTML版に戻す場合:
+
+```bash
+# 1. GitHub Pages の配信ソースを旧ブランチ（gh-pages など）に切り戻す
+gh api repos/AI-Solution-dep/ai-consulting-lp/pages \
+  -X PUT -f build_type=legacy
+
+# 2. Next.js 化前のコミットに revert する
+#    Next.js 移植完了コミット: 3f38cfc
+#    移植前の最終コミット例:  53ad3f6
+git revert 3f38cfc
 ```
 
-## iframe利用時の注意
+---
 
-iframeで埋め込む場合は、親ページ側で十分な高さを確保してください。ページ内はレスポンシブ対応していますが、iframeの高さが不足するとセクション下部やCTAが見切れます。
+## ディレクトリ構成
 
-```html
-<iframe src="/ai-training-lp/" title="業務改善伴走支援" style="width:100%; min-height:900px; border:0;"></iframe>
+```
+.
+├── src/
+│   ├── app/
+│   │   ├── globals.css       # Tailwind @theme + グローバルスタイル
+│   │   ├── layout.tsx        # フォント読み込み・メタデータ
+│   │   └── page.tsx          # 全セクションのエントリポイント
+│   ├── components/
+│   │   ├── layout/           # SiteHeader / SiteFooter
+│   │   ├── sections/         # 各セクション（Hero, Problem, Why … FinalCta）
+│   │   └── ui/               # 汎用UIコンポーネント（Button, FadeIn, CountUp …）
+│   └── lib/
+│       ├── asset.ts          # basePath 対応のアセットパス解決
+│       └── cn.ts             # clsx ラッパー
+├── public/assets/            # ロゴ等の静的アセット
+├── docs/superpowers/
+│   ├── specs/                # 移植仕様書
+│   └── plans/                # 実装計画
+├── design-system/            # デザイントークン・スタイルガイド資料
+└── screenshots/              # UI監査用スクリーンショット
 ```
 
-親サイト側で `overflow: hidden` を指定しているコンテナに入れる場合は、モバイル時の縦スクロールが阻害されないか確認してください。
+---
 
-## section移植時の注意
+## 旧静的HTML版について
 
-セクション単位で他ページへ移植する場合は、必ず `.ai-training-lp` ラッパー配下に配置してください。CSSは `.ai-training-lp` をスコープとしているため、ラッパーがないとスタイルが適用されません。
+旧静的HTML版（`index.html` / `styles-editorial.css` 等）は git 履歴（コミット `3f38cfc` 以前）を参照。
 
-```html
-<div class="ai-training-lp">
-  <!-- 移植したsectionをここに配置 -->
-</div>
-```
+---
 
-JQIT本体サイトへ一部セクションだけを移植する場合は、`#program`、`#deliverables`、`#price`、`#cta` を優先するとサービス概要、成果物、価格、問い合わせ導線を最小構成で載せられます。
+## 運用ノート
 
-## CTAリンク差し替え場所
-
-暫定CTAは以下の `mailto` に統一しています。
-
-```text
-mailto:info@jqit.co.jp?subject=業務改善伴走支援の無料ヒアリング相談
-```
-
-差し替える場合は `index.html` 内の上記文字列を検索し、問い合わせフォームURLなどに置換してください。主な差し替え対象は、ナビの「相談する」、ヒーローの「無料ヒアリングを相談する」、最下部CTAの「業務改善テーマを相談する」です。
+Spir 予約リンク設定や残対応タスクは `NOTES.md` を参照。
