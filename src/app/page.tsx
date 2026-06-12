@@ -13,6 +13,10 @@ import Program from "@/components/sections/Program";
 import Deliverables from "@/components/sections/Deliverables";
 import NarrowDown from "@/components/sections/NarrowDown";
 import Price from "@/components/sections/Price";
+import NextStep from "@/components/sections/NextStep";
+import Security from "@/components/sections/Security";
+import Faq from "@/components/sections/Faq";
+import FinalCta from "@/components/sections/FinalCta";
 
 export default function Home() {
   return (
@@ -31,6 +35,10 @@ export default function Home() {
         <Deliverables />
         <NarrowDown />
         <Price />
+        <NextStep />
+        <Security />
+        <Faq />
+        <FinalCta />
       </main>
       <SiteFooter />
       <PageEffects />
