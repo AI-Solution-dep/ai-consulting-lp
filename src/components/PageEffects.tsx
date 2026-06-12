@@ -4,6 +4,11 @@ import { useEffect } from "react";
 
 export default function PageEffects() {
   // JS① スクロール連動リビール（index.html L579-641 と同一ロジック）
+  // 既知のトレードオフ: 旧実装は body 末尾の同期スクリプトで first paint 前に data-reveal を
+  // 付与していたが、useEffect はペイント後に走るため、初回ビューポート内の対象は
+  // 「表示→opacity:0→リビール」と一瞬ちらつき得る（ヒーローが画面を占める通常ロードでは実質不可視）。
+  // SSRで属性を先出しするとJS無効時に opacity:0 のまま閲覧不能になるため、この方式を採る。
+  // data-reveal / --reveal-delay / is-visible は cleanup で除去しない（再適用が冪等のため意図的）。
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (!("IntersectionObserver" in window)) return;
