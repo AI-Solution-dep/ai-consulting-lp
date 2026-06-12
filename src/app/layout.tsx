@@ -37,6 +37,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ai-solution-dep.github.io/ai-consulting-lp"),
   title: "AI業務自動化支援｜Google Workspace・kintone・freeeなど業務アプリ連携 | JQIT",
   description:
     "Google Workspace、kintone、freee、LINE WORKS、Chatwork など、いま使っている業務アプリをそのままに、毎日の手作業を一か月で「動く自動化」に変える導入支援。",
