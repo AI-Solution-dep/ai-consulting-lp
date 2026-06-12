@@ -10,7 +10,7 @@ export default function OutcomeStrip() {
           <article>
             <span className="num-bg" aria-hidden="true">01</span>
             <h3><span className="num" aria-hidden="true">01</span>貴社専用の「AIの仕事の型」</h3>
-            <p>貴社の業務手順・判断基準を、AIがそのまま実行できる形（エージェントスキル・プラグイン）にして納品。汎用ツールではない、貴社だけの資産です。</p>
+            <p>貴社の業務手順・判断基準を、AIがそのまま実行できる「仕事の教え方」として納品します（技術的には、エージェントスキルと呼ばれる形式です）。汎用ツールではない、貴社だけの資産です。</p>
           </article>
           <article>
             <span className="num-bg" aria-hidden="true">02</span>

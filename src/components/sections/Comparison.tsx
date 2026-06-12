@@ -5,7 +5,7 @@ export default function Comparison() {
         <span className="section-num">02 — Comparison</span>
         <div className="section-heading">
           <h2 id="comparison-title"><span className="keep-together">AI研修</span>との違い</h2>
-          <p>知識のインプットや単発のQAボットではなく、毎日発生している資料作成・集計・チェック・下書きの手作業を減らすことをゴールにしています。</p>
+          <p>知識のインプットや単発のQAボットではなく、毎日発生している資料作成・集計・チェック・下書きの<span className="nowrap">手作業</span>を減らすことをゴールにしています。</p>
         </div>
         <div className="comparison-table-wrap">
           <table className="comparison-table">

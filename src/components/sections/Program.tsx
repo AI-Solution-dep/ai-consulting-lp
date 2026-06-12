@@ -30,7 +30,7 @@ export default function Program() {
             <span className="num-bg" aria-hidden="true">04</span>
             <span className="program-card__tag">Asset</span>
             <h3>スキルとひな形の資産化</h3>
-            <p>貴社の業務をエージェントスキルとして整備し、必要に応じてGAS（Googleのアプリを自動で動かす仕組み）などのスクリプトと合わせて、貴社で管理可能な形で納品します。</p>
+            <p>貴社の業務をエージェントスキルとして整備し、必要に応じてGoogleのアプリを自動で動かす仕組み（GAS）などのスクリプトと合わせて、貴社で管理可能な形で納品します。</p>
           </article>
         </div>
         <div className="timeline">

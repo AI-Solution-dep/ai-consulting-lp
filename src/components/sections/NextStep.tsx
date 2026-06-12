@@ -10,12 +10,13 @@ export default function NextStep() {
         <div className="layers">
           <article className="layer-card">
             <span className="layer-card__num">Layer 01</span>
+            <span className="layer-card__badge">まずはここから</span>
             <h3>一か月導入パック</h3>
             <ul>
               <li>1〜3テーマでの自動化検証</li>
               <li>エージェントスキルと自動化ひな形</li>
               <li>運用ルールとAI導入ロードマップ</li>
-              <li>¥300,000〜800,000</li>
+              <li>初回限定 ¥200,000〜（通常 ¥300,000〜）</li>
             </ul>
           </article>
           <article className="layer-card layer-card--featured">
@@ -25,12 +26,12 @@ export default function NextStep() {
               <li>継続的改善と追加テーマ実装</li>
               <li>業務アプリ連携と部門横展開の伴走</li>
               <li>権限、ログ、承認フローの整備</li>
-              <li>月 ¥200,000〜500,000</li>
+              <li>月 ¥200,000〜¥500,000</li>
             </ul>
           </article>
-          <article className="layer-card layer-card--final">
+          <article className="layer-card">
             <span className="layer-card__num">Layer 03</span>
-            <h3><span className="keep-together">AI業務自動化パートナー</span><small>Embedded AI Automation Partner</small></h3>
+            <h3><span className="keep-together">AI業務自動化パートナー</span></h3>
             <ul>
               <li>経営会議・業務改善会議への関与</li>
               <li>AI投資判断、ガバナンス設計</li>

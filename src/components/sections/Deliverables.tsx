@@ -10,7 +10,7 @@ export default function Deliverables() {
               <p>一か月で作った自動化の考え方と実装を、貴社の資産として残します。担当者だけの経験で終わらせず、社内で再利用・横展開できる形にします。</p>
             </div>
             <ul className="deliverables-list">
-              <li><div><strong>エージェントスキル・プラグイン（貴社専用）</strong><span>業務手順・判断基準・出力形式を、AIがそのまま実行できる形に整備した「AIの仕事の型」。</span></div></li>
+              <li><div><strong>貴社専用の「AIへの仕事の教え方」一式</strong><span>業務手順・判断基準・出力形式を、AIがそのまま実行できる形に整備します（エージェントスキル・プラグイン形式）。</span></div></li>
               <li><div><strong>自動化スクリプト・ひな形</strong><span>プログラム中に作成したスクリプトや手順書。アプリ連携を行った場合は、その設定手順も含めます。</span></div></li>
               <li><div><strong>AI向け業務マニュアルの整備ガイド</strong><span>業務マニュアルをAIに教える形へ書き換える手順。担当者に引き継ぎ、社内で更新し続けられるように。</span></div></li>
               <li><div><strong>運用ルール・権限設計メモ</strong><span>人の承認、ログ、例外対応、情報の扱い方を整理。</span></div></li>

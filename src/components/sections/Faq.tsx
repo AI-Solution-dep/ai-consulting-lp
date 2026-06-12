@@ -1,13 +1,17 @@
 export default function Faq() {
   return (
     <section className="section" id="faq" aria-labelledby="faq-title">
-      <div className="container container--narrow">
+      <div className="container">
         <span className="section-num">10 — FAQ</span>
         <div className="section-heading">
           <h2 id="faq-title">よくあるご質問</h2>
           <p>ご相談前に多くいただく質問にお答えします。</p>
         </div>
         <div className="faq-list">
+          <details className="faq-item">
+            <summary>無料相談を受けたら、契約しないといけませんか？</summary>
+            <p className="faq-item__answer">いいえ。相談のみで終えていただいて構いません。当社から営業電話やしつこいフォローをすることもありません。</p>
+          </details>
           <details className="faq-item">
             <summary>kintoneやfreeeの運用が整理されていなくても相談できますか？</summary>
             <p className="faq-item__answer">はい。まずは利用中のアプリ、権限、現場の手作業を確認します。最初はPCの中で完結する業務からテーマを選ぶため、特定アプリの高度な開発や連携を前提にしません。</p>
@@ -31,6 +35,10 @@ export default function Faq() {
           <details className="faq-item">
             <summary>社外秘データや個人情報をAIに渡すのが不安です。</summary>
             <p className="faq-item__answer">扱う情報、AIに渡す範囲、操作権限を最初に整理します。初期導入では、下書き作成・候補提示・通知などから始め、送信・登録・会計処理は人の承認を挟む設計にします。</p>
+          </details>
+          <details className="faq-item">
+            <summary>20万円のほかに費用はかかりますか？</summary>
+            <p className="faq-item__answer">AIツールの利用料（目安：月数千円〜）が別途必要になる場合があります。無料相談の時点で、貴社のケースでの総額の目安をご提示します。</p>
           </details>
         </div>
       </div>

@@ -81,6 +81,8 @@ const JSON_LD_FAQ = `
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {"@type": "Question", "name": "無料相談を受けたら、契約しないといけませんか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。相談のみで終えていただいて構いません。当社から営業電話やしつこいフォローをすることもありません。"}},
+      {"@type": "Question", "name": "20万円のほかに費用はかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "AIツールの利用料（目安：月数千円〜）が別途必要になる場合があります。無料相談の時点で、総額の目安をご提示します。"}},
       {"@type": "Question", "name": "kintoneやfreeeの運用が整理されていなくても相談できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。まずは利用中のアプリ、権限、現場の手作業を確認します。最初はPCの中で完結する業務からテーマを選ぶため、特定アプリの高度な開発や連携を前提にしません。"}},
       {"@type": "Question", "name": "ITリテラシーが高くない社員でも回せますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。現場担当者には完成した手順と確認ポイントを渡し、技術的な詳細を意識しなくても運用できる形にします。"}},
       {"@type": "Question", "name": "一か月で終わらせず、その後も支援してもらえますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。一か月導入後、月次顧問契約（月20万〜50万円）で追加テーマ、横展開、改善、社内定着を支援します。"}},
