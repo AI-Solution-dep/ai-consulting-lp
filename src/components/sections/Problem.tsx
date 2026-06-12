@@ -14,8 +14,8 @@ export default function Problem() {
             </ul>
           </div>
           <div className="problem__affinity">
-            <p>アプリやツールは増えた。でも、手作業は減らない。</p>
-            <p><strong>資料と資料の間に、人間が挟まっている。</strong></p>
+            <p>ChatGPTやGeminiは、もう入れた。<br />でも、現場の手作業は減らない。</p>
+            <p><strong>聞けば答えるAIと、仕事を進めるAIは、別物です。</strong></p>
             <p className="problem__affinity-cta">そのギャップを埋めるのが、<br />JQITのAI導入伴走支援です。</p>
           </div>
         </div>

@@ -14,8 +14,8 @@ export default function OutcomeStrip() {
           </article>
           <article>
             <span className="num-bg" aria-hidden="true">02</span>
-            <h3><span className="num" aria-hidden="true">02</span>自社でAIを育てられる力</h3>
-            <p>業務マニュアルをAI向けに整備する方法を、担当者に直接引き継ぎます。私たちがいなくても新しい業務をAIに教えられるよう、手順とガイドを残します。</p>
+            <h3><span className="num" aria-hidden="true">02</span>AI活用を内製化する力</h3>
+            <p>業務マニュアルをAI向けに整備する方法を、担当者に直接引き継ぎます。私たちがいなくても新しい業務をAIに教えられる、社外に依存しない体制を残します。</p>
           </article>
           <article>
             <span className="num-bg" aria-hidden="true">03</span>

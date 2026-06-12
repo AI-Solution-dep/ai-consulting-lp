@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ai-solution-dep.github.io/ai-consulting-lp"),
   title: "AI導入伴走支援｜資料作成・データ整理・書類チェックを一か月で自動化 | JQIT",
   description:
-    "議事録、報告書づくり、データ集計、書類チェック——PCの中で完結する毎日の手作業を、一か月で「動く自動化」に変える導入支援。効果が見えたら kintone・freee など業務アプリ連携へ広げます。",
+    "ChatGPTやGeminiを入れたのに、成果が見えない——その次の一手。議事録、報告書、データ集計、書類チェックなどの手作業をAIエージェントで一か月で自動化し、AI活用の内製化まで伴走します。",
   openGraph: {
     title: "AI導入伴走支援｜JQIT",
     description:
-      "資料作成・データ整理・書類チェックなど、PCで完結する手作業から一か月で自動化。効果が見えたら業務アプリ連携へ。",
+      "チャットAIで止まっていませんか。資料作成・データ整理・書類チェックをAIエージェントで自動化し、内製化まで伴走します。",
     type: "website",
     images: ["https://ai-solution-dep.github.io/ai-consulting-lp/assets/generated/10-og.png"],
   },
@@ -67,7 +67,7 @@ const JSON_LD_SERVICE = `
         "https://www.instagram.com/jqit202412"
       ]
     },
-    "description": "議事録、報告書づくり、データ集計、書類チェックなど、PCの中で完結する毎日の手作業をAIで自動化する一か月導入支援。効果が見えたら Google Workspace、kintone、freee など業務アプリ連携へ広げます。",
+    "description": "議事録、報告書づくり、データ集計、書類チェックなど、PCの中で完結する毎日の手作業をAIエージェントで自動化する一か月導入支援。AI活用の内製化を支援し、効果が見えたら Google Workspace、kintone、freee など業務アプリ連携へ広げます。",
     "areaServed": "JP",
     "offers": [
       {"@type": "Offer", "name": "一か月導入パック（初回限定）", "price": "200000", "priceCurrency": "JPY", "description": "一か月、PCで完結する1テーマの自動化実装と運用ルール整備"},
