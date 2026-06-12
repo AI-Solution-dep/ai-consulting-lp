@@ -31,11 +31,11 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-solution-dep.github.io/ai-consulting-lp"),
-  title: "AI業務自動化支援｜資料作成・データ整理・書類チェックを一か月で自動化 | JQIT",
+  title: "AI導入伴走支援｜資料作成・データ整理・書類チェックを一か月で自動化 | JQIT",
   description:
     "議事録、報告書づくり、データ集計、書類チェック——PCの中で完結する毎日の手作業を、一か月で「動く自動化」に変える導入支援。効果が見えたら kintone・freee など業務アプリ連携へ広げます。",
   openGraph: {
-    title: "AI業務自動化支援｜JQIT",
+    title: "AI導入伴走支援｜JQIT",
     description:
       "資料作成・データ整理・書類チェックなど、PCで完結する手作業から一か月で自動化。効果が見えたら業務アプリ連携へ。",
     type: "website",
@@ -48,7 +48,7 @@ const JSON_LD_SERVICE = `
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AI業務自動化支援",
+    "name": "AI導入伴走支援",
     "provider": {
       "@type": "Organization",
       "name": "株式会社JQIT",

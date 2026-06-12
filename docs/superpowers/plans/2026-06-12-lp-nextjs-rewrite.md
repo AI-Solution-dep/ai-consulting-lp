@@ -336,11 +336,11 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "AI業務自動化支援｜Google Workspace・kintone・freeeなど業務アプリ連携 | JQIT",
+  title: "AI導入伴走支援｜Google Workspace・kintone・freeeなど業務アプリ連携 | JQIT",
   description:
     "Google Workspace、kintone、freee、LINE WORKS、Chatwork など、いま使っている業務アプリをそのままに、毎日の手作業を一か月で「動く自動化」に変える導入支援。",
   openGraph: {
-    title: "AI業務自動化支援｜JQIT",
+    title: "AI導入伴走支援｜JQIT",
     description:
       "Claude / Codex と API・GAS連携で、Google Workspace・kintone・freee など既存SaaSをまたぐ手作業を減らします。",
     type: "website",

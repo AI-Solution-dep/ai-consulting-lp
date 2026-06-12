@@ -16,7 +16,7 @@ export default function Problem() {
           <div className="problem__affinity">
             <p>アプリやツールは増えた。でも、手作業は減らない。</p>
             <p><strong>資料と資料の間に、人間が挟まっている。</strong></p>
-            <p className="problem__affinity-cta">そのギャップを埋めるのが、<br />JQITの業務自動化支援です。</p>
+            <p className="problem__affinity-cta">そのギャップを埋めるのが、<br />JQITのAI導入伴走支援です。</p>
           </div>
         </div>
       </div>

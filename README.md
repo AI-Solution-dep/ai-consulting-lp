@@ -1,6 +1,6 @@
 # AI導入コンサル LP
 
-JQIT AI業務自動化支援サービスのランディングページ。  
+JQIT AI導入伴走支援サービスのランディングページ。  
 Next.js 16 + TypeScript + Tailwind CSS v4 で実装し、GitHub Pages に公開する。
 
 公開URL: https://ai-solution-dep.github.io/ai-consulting-lp/
