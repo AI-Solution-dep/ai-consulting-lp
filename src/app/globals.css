@@ -148,21 +148,25 @@
   letter-spacing: 0.25em;
   color: var(--accent-red);
   text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--accent-red);
   margin-bottom: 24px;
+  /* Phase 2: kicker 赤線 — 絶対配置で行ボックス高さに影響させない */
+  position: relative;
+  padding-left: 34px; /* 線24px + 間隔10px */
 }
 
 /* ===== Phase 2: kicker 赤線（採用サイト技法の移入） ===== */
 .editorial-lp .section-num::before {
   content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 24px;
   height: 1px;
   background: var(--accent-red);
-  flex: none;
 }
 
 /* Hand-drawn underline for highlighted words */
@@ -466,9 +470,7 @@
 }
 
 .editorial-lp .outcome-strip h2 small {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: block;
   font-family: var(--font-serif-en);
   font-style: italic;
   font-weight: 400;
@@ -476,13 +478,19 @@
   color: var(--accent-gold);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
+  /* Phase 2: kicker 金線 — 絶対配置で行ボックス高さに影響させない */
+  position: relative;
+  padding-left: 34px; /* 線24px + 間隔10px */
 }
 .editorial-lp .outcome-strip h2 small::before {
   content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 24px;
   height: 1px;
   background: var(--accent-gold);
-  flex: none;
 }
 
 .editorial-lp .outcome-grid {
