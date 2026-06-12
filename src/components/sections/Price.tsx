@@ -1,3 +1,5 @@
+import { CountUp } from "@/components/ui/CountUp";
+
 export default function Price() {
   return (
     <section className="section section--paper" id="price" aria-labelledby="price-title">
@@ -5,7 +7,7 @@ export default function Price() {
         <span className="section-num">07 — Price</span>
         <div className="price-headline">
           <div>
-            <h2 id="price-title">一か月導入パック<br /><span className="accent">初回限定<span className="nowrap">20万円〜</span></span>。</h2>
+            <h2 id="price-title">一か月導入パック<br /><span className="accent">初回限定<span className="nowrap"><CountUp value="20" />万円〜</span></span>。</h2>
             <p>通常30万円〜のライト導入を、サービス開始記念の限定価格で提供します。まずは対象テーマを1〜3つに絞り、現場で試せる自動化と運用ルールを作ります。</p>
           </div>
           <article className="price-card" aria-label="価格">
