@@ -2008,3 +2008,43 @@
     transition: background-color 0.25s linear;
   }
 }
+
+/* ===== Phase 2: 極薄の巨大背景番号（採用サイト技法の移入） ===== */
+.editorial-lp .num-bg {
+  position: absolute;
+  right: -6px;
+  top: -24px;
+  font-family: var(--font-serif-en);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(64px, 9vw, 110px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  user-select: none;
+  color: rgba(15, 15, 16, 0.05);
+  transition: color 0.5s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+
+/* position:relative + overflow:hidden をカードに付与 */
+.editorial-lp .outcome-grid > article,
+.editorial-lp .program-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* OutcomeStrip は暗地 → 白系の極薄番号 */
+.editorial-lp .outcome-strip .num-bg {
+  color: rgba(250, 248, 245, 0.07);
+}
+.editorial-lp .outcome-grid > article:hover .num-bg {
+  color: rgba(200, 16, 46, 0.30);
+}
+
+/* Program カードは明地 → 黒系の極薄番号、hover は薄赤 */
+.editorial-lp .program-card .num-bg {
+  color: rgba(15, 15, 16, 0.05);
+}
+.editorial-lp .program-card:hover .num-bg {
+  color: rgba(200, 16, 46, 0.12);
+}

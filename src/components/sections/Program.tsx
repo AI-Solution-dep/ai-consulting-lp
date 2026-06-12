@@ -9,21 +9,25 @@ export default function Program() {
         </div>
         <div className="program-grid">
           <article className="program-card">
+            <span className="num-bg" aria-hidden="true">01</span>
             <span className="program-card__tag">Scope</span>
             <h3>対象テーマ1〜3つ</h3>
             <p>業務ヒアリングで、一か月で効果を確認しやすい範囲に絞り込みます。</p>
           </article>
           <article className="program-card">
+            <span className="num-bg" aria-hidden="true">02</span>
             <span className="program-card__tag">Session</span>
             <h3>週1回60分×4回</h3>
             <p>棚卸し、設計、実装レビュー、運用整理を定例の中で進めます。</p>
           </article>
           <article className="program-card">
+            <span className="num-bg" aria-hidden="true">03</span>
             <span className="program-card__tag">Support</span>
             <h3>チャット/メール質疑</h3>
             <p>営業日対応で、定例の間に出た疑問や判断に迷う点へ回答します。</p>
           </article>
           <article className="program-card">
+            <span className="num-bg" aria-hidden="true">04</span>
             <span className="program-card__tag">Asset</span>
             <h3>スキルとひな形の資産化</h3>
             <p>貴社の業務をエージェントスキルとして整備し、GAS（Googleのアプリを自動で動かす仕組み）やAPI連携と合わせて、貴社で管理可能な形で納品します。</p>
