@@ -466,7 +466,7 @@
 }
 
 .editorial-lp .outcome-strip h2 small {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-serif-en);
