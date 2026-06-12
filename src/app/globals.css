@@ -148,10 +148,21 @@
   letter-spacing: 0.25em;
   color: var(--accent-red);
   text-transform: uppercase;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--accent-red);
   margin-bottom: 24px;
+}
+
+/* ===== Phase 2: kicker 赤線（採用サイト技法の移入） ===== */
+.editorial-lp .section-num::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--accent-red);
+  flex: none;
 }
 
 /* Hand-drawn underline for highlighted words */
@@ -455,7 +466,9 @@
 }
 
 .editorial-lp .outcome-strip h2 small {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-serif-en);
   font-style: italic;
   font-weight: 400;
@@ -463,6 +476,13 @@
   color: var(--accent-gold);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
+}
+.editorial-lp .outcome-strip h2 small::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--accent-gold);
+  flex: none;
 }
 
 .editorial-lp .outcome-grid {
