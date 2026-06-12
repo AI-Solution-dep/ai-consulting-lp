@@ -4,7 +4,7 @@
 
 /* ===== デザイントークン（採用サイト ui/ 部品互換。値はLPブランド） ===== */
 @theme {
-  --color-brand: #C8102E;
+  --color-brand: #C8102E; /* .editorial-lp の --accent-red と同値 — 変更時は両方同期すること */
   --color-brand-dark: #9A0E26;
   --color-ink: #0F0F10;
   --color-body: #2A2A2D;
@@ -21,6 +21,30 @@
 
   --radius-card: 2px;
 }
+/* Tailwind preflight 非使用のための最小互換（border utility 用） */
+@layer base {
+  *, ::before, ::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+  }
+}
+
+/* ui/FadeIn 用（採用サイト globals.css 由来。現状LPでは未使用、Phase 2 以降の新規要素用） */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 0.84, 0.44, 1),
+      transform 0.8s cubic-bezier(0.16, 0.84, 0.44, 1);
+  }
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ==========================================================================
    JQIT AIエージェント業務自動化支援 LP - Editorial Style
    Editorial magazine × Handwritten accent
