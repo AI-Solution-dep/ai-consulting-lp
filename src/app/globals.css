@@ -338,7 +338,7 @@
 }
 
 .editorial-lp .hero h1 .accent {
-  color: var(--accent-red);
+  color: var(--ink); /* 2026-06-12 赤の減量: 大見出しは墨。赤はCTA・小ラベル・差し色のみ */
 }
 
 .editorial-lp .hero-title__line {
@@ -573,7 +573,7 @@
   font-weight: 500;
   font-style: italic;
   font-size: 3rem;
-  color: var(--accent-red);
+  color: var(--accent-gold);
   line-height: 1;
   margin-bottom: 18px;
   display: block;
@@ -783,7 +783,7 @@
   padding-top: 14px;
   border-top: 1px solid var(--rule-soft);
   font-weight: 600;
-  color: var(--accent-red) !important;
+  color: var(--ink) !important;
 }
 
 /* Program timeline ------------------------------------------------------- */
@@ -981,7 +981,7 @@
 }
 
 .editorial-lp .price-headline h2 .accent {
-  color: var(--accent-red);
+  color: var(--ink); /* 赤の減量: 巨大な赤い価格は商材感が出るため墨に */
 }
 
 .editorial-lp .price-headline p {
@@ -1774,9 +1774,9 @@
   font-family: var(--font-serif-jp);
   font-size: 0.85rem;
   letter-spacing: 0.1em;
-  color: var(--accent-red);
+  color: var(--accent-gold); /* 黒背景に赤文字は商材LPの文法のため、黒帯は白＋金で組む */
   margin-bottom: 28px;
-  border-left: 3px solid var(--accent-red);
+  border-left: 3px solid var(--accent-gold);
   padding-left: 12px;
 }
 
@@ -1820,7 +1820,7 @@
 }
 
 .editorial-lp .problem__affinity strong {
-  color: var(--accent-red);
+  color: var(--paper);
   font-weight: 700;
 }
 
@@ -1839,7 +1839,7 @@
   line-height: 1.6;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 2px solid var(--accent-red);
+  border-top: 2px solid rgba(250, 248, 245, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -1857,7 +1857,7 @@
 
 /* Narrow-down banner */
 .editorial-lp .narrow-down {
-  background: var(--accent-red);
+  background: var(--ink); /* 赤の減量: 全幅の赤帯はチラシ感が出るため墨帯＋赤ボタンに */
   color: var(--paper);
   text-align: center;
   padding: 24px 24px;
@@ -1880,15 +1880,15 @@
 }
 
 .editorial-lp .narrow-down .button--primary {
-  background: var(--paper);
-  color: var(--accent-red);
-  border-color: var(--paper);
+  background: var(--accent-red);
+  color: #ffffff;
+  border-color: var(--accent-red);
 }
 
 .editorial-lp .narrow-down .button--primary:hover {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
+  background: var(--accent-red-deep);
+  color: #ffffff;
+  border-color: var(--accent-red-deep);
 }
 
 /* ==========================================================================
