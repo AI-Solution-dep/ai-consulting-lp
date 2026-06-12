@@ -7,6 +7,9 @@ import OutcomeStrip from "@/components/sections/OutcomeStrip";
 import Why from "@/components/sections/Why";
 import Comparison from "@/components/sections/Comparison";
 import Saas from "@/components/sections/Saas";
+import Stories from "@/components/sections/Stories";
+import MidCta from "@/components/sections/MidCta";
+import Program from "@/components/sections/Program";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
         <Why />
         <Comparison />
         <Saas />
+        <Stories />
+        <MidCta />
+        <Program />
       </main>
       <SiteFooter />
       <PageEffects />
