@@ -4,8 +4,8 @@
 
 /* ===== デザイントークン（採用サイト ui/ 部品互換。値はLPブランド） ===== */
 @theme {
-  --color-brand: #C8102E; /* .editorial-lp の --accent-red と同値 — 変更時は両方同期すること */
-  --color-brand-dark: #9A0E26;
+  --color-brand: #E60012; /* JQITレッド（ロゴ実測値・採用サイトと共通）。.editorial-lp の --accent-red と同値 — 変更時は両方同期すること */
+  --color-brand-dark: #B3000E;
   --color-ink: #0F0F10;
   --color-body: #2A2A2D;
   --color-muted: #6B6B70;
@@ -59,8 +59,8 @@
   --paper-warm: #F2EDE4;
   --rule: #0F0F10;
   --rule-soft: #D8D2C7;
-  --accent-red: #C8102E;
-  --accent-red-deep: #9A0E26;
+  --accent-red: #E60012;
+  --accent-red-deep: #B3000E;
   --accent-gold: #B08D57;
   --muted: #6B6B70;
   --white: #FFFFFF;
@@ -171,14 +171,14 @@
 
 /* Hand-drawn underline for highlighted words */
 .editorial-lp .marker {
-  background-image: linear-gradient(transparent 60%, rgba(200, 16, 46, 0.18) 60%, rgba(200, 16, 46, 0.18) 92%, transparent 92%);
+  background-image: linear-gradient(transparent 60%, rgba(230, 0, 18, 0.18) 60%, rgba(230, 0, 18, 0.18) 92%, transparent 92%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding: 0 0.2em;
 }
 
 .editorial-lp .underline-hand {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,0 50,4 T100,3' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,0 50,4 T100,3' fill='none' stroke='%23E60012' stroke-width='2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 8px;
@@ -1869,12 +1869,16 @@
    End PASONA additions
    ========================================================================== */
 
+/* 採用サイトのフッター下段と同じ作法: 左=© 右=サイトラベル、英字サンセリフ・広トラッキング */
 .editorial-lp .site-footer__copy {
   margin-top: 30px;
-  text-align: center;
-  font-family: var(--font-serif-en);
-  font-style: italic;
-  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-sans-en);
+  font-size: 11px;
+  letter-spacing: 0.1em;
   color: rgba(250, 248, 245, 0.5);
 }
 
@@ -1891,6 +1895,13 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* タグライン前半21文字（コンテナ実幅295px）で「る、」が孤立しないよう 21字×0.86rem=289px に収める */
+  .editorial-lp .site-footer__tagline {
+    font-size: 0.86rem;
   }
 }
 
@@ -2066,7 +2077,7 @@
   color: rgba(250, 248, 245, 0.07);
 }
 .editorial-lp .outcome-grid > article:hover .num-bg {
-  color: rgba(200, 16, 46, 0.30);
+  color: rgba(230, 0, 18, 0.30);
 }
 
 /* Program カードは明地 → 黒系の極薄番号、hover は薄赤 */
@@ -2074,5 +2085,5 @@
   color: rgba(15, 15, 16, 0.05);
 }
 .editorial-lp .program-card:hover .num-bg {
-  color: rgba(200, 16, 46, 0.12);
+  color: rgba(230, 0, 18, 0.12);
 }

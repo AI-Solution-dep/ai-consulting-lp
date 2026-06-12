@@ -90,7 +90,7 @@ export default function HeroParticles() {
       // 粒子
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
-        ctx!.fillStyle = p.red ? "rgba(200, 16, 46, 0.5)" : "rgba(15, 15, 16, 0.4)";
+        ctx!.fillStyle = p.red ? "rgba(230, 0, 18, 0.5)" : "rgba(15, 15, 16, 0.4)";
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx!.fill();
