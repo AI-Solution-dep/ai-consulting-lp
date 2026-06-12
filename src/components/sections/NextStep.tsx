@@ -13,7 +13,7 @@ export default function NextStep() {
             <h3>一か月導入パック</h3>
             <ul>
               <li>1〜3テーマでの自動化検証</li>
-              <li>エージェントスキルとGAS/API連携ひな形</li>
+              <li>エージェントスキルと自動化ひな形</li>
               <li>運用ルールとAI導入ロードマップ</li>
               <li>¥300,000〜800,000</li>
             </ul>
@@ -23,7 +23,7 @@ export default function NextStep() {
             <h3>月次顧問契約</h3>
             <ul>
               <li>継続的改善と追加テーマ実装</li>
-              <li>部門横展開の伴走</li>
+              <li>業務アプリ連携と部門横展開の伴走</li>
               <li>権限、ログ、承認フローの整備</li>
               <li>月 ¥200,000〜500,000</li>
             </ul>

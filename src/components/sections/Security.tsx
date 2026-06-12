@@ -5,7 +5,7 @@ export default function Security() {
         <span className="section-num">09 — Security</span>
         <div className="section-heading">
           <h2 id="security-title">勝手に送信・登録しない。<br /><span className="keep-together">人が確認できるAI自動化</span>。</h2>
-          <p>freee、kintone、Google Drive、顧客情報を扱うからこそ、便利さより先に権限・ログ・承認の設計を置きます。</p>
+          <p>見積書、請求書、議事録、顧客情報——大事なデータを扱うからこそ、便利さより先に権限・ログ・承認の設計を置きます。</p>
         </div>
         <div className="security-grid">
           <article>

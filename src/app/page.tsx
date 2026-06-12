@@ -28,8 +28,8 @@ export default function Home() {
         <OutcomeStrip />
         <Why />
         <Comparison />
-        <Saas />
         <Stories />
+        <Saas />
         <MidCta />
         <Program />
         <Deliverables />

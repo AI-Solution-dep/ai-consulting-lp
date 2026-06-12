@@ -21,7 +21,7 @@ export default function Price() {
         <div className="price-details">
           <article>
             <h3>初回限定 ¥200,000〜</h3>
-            <p>1テーマ、Google Workspace / GAS中心。転記・集計・通知など、効果が見えやすい小さな実装から始めます。</p>
+            <p>1テーマ。議事録、資料作成、データ集計、書類チェックなど、PCの中で完結する業務から始めます。</p>
           </article>
           <article>
             <h3>ライト 通常 ¥300,000〜</h3>

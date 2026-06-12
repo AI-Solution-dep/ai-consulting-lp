@@ -2,10 +2,10 @@ export default function Saas() {
   return (
     <section className="section" id="saas" aria-labelledby="saas-title">
       <div className="container">
-        <span className="section-num">03 — App Coverage</span>
+        <span className="section-num">04 — App Coverage</span>
         <div className="section-heading">
-          <h2 id="saas-title">まずは、<br /><span className="marker keep-together">使い慣れたアプリ</span>から</h2>
-          <p>Google Workspace、kintone、freee など、APIやGAS連携の余地があり、現場の手作業が残りやすい領域から始めます。小さく検証し、効果が見えた業務から段階的に広げます。</p>
+          <h2 id="saas-title">効果が見えたら、<br /><span className="marker keep-together">ここまで広げられます</span></h2>
+          <p>最初の一か月は、PCの中で完結するテーマから始めます。効果が確認できたら、Google Workspace、kintone、freee など、いま使っている業務アプリをまたぐ自動化へ段階的に広げます。</p>
         </div>
         <div className="saas-grid">
           <article className="saas-card saas-card--primary">

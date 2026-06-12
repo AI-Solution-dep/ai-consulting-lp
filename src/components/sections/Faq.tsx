@@ -10,11 +10,11 @@ export default function Faq() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>kintoneやfreeeの運用が整理されていなくても相談できますか？</summary>
-            <p className="faq-item__answer">はい。まずは利用中のアプリ、権限、連携可否、現場の手作業を確認します。Google Workspaceで小さく始められるテーマから選ぶため、特定アプリの高度な開発を前提にしません。</p>
+            <p className="faq-item__answer">はい。まずは利用中のアプリ、権限、現場の手作業を確認します。最初はPCの中で完結する業務からテーマを選ぶため、特定アプリの高度な開発や連携を前提にしません。</p>
           </details>
           <details className="faq-item">
             <summary>ITリテラシーが高くない社員でも回せますか？</summary>
-            <p className="faq-item__answer">はい。現場担当者には完成した手順と確認ポイントを渡し、APIやGASの詳細を意識しなくても運用できる形にします。重要な登録・送信・会計処理は、人の承認を挟む設計にします。</p>
+            <p className="faq-item__answer">はい。現場担当者には完成した手順と確認ポイントを渡し、技術的な詳細を意識しなくても運用できる形にします。重要な登録・送信・会計処理は、人の承認を挟む設計にします。</p>
           </details>
           <details className="faq-item">
             <summary>一か月で終わらせず、その後も支援してもらえますか？</summary>
@@ -26,7 +26,7 @@ export default function Faq() {
           </details>
           <details className="faq-item">
             <summary>業務ヒアリングの前に準備するものはありますか？</summary>
-            <p className="faq-item__answer">最初は「使っているアプリ」と「減らしたい手作業」だけで大丈夫です。例：スプレッドシートへの転記、請求書作成、kintone更新、チャット通知、問い合わせ返信の下書きなど。</p>
+            <p className="faq-item__answer">最初は「使っているアプリ」と「減らしたい手作業」だけで大丈夫です。例：議事録の清書、報告書づくり、スプレッドシートの集計、請求書のチェック、問い合わせ返信の下書きなど。</p>
           </details>
           <details className="faq-item">
             <summary>社外秘データや個人情報をAIに渡すのが不安です。</summary>
