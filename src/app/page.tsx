@@ -10,6 +10,9 @@ import Saas from "@/components/sections/Saas";
 import Stories from "@/components/sections/Stories";
 import MidCta from "@/components/sections/MidCta";
 import Program from "@/components/sections/Program";
+import Deliverables from "@/components/sections/Deliverables";
+import NarrowDown from "@/components/sections/NarrowDown";
+import Price from "@/components/sections/Price";
 
 export default function Home() {
   return (
@@ -25,6 +28,9 @@ export default function Home() {
         <Stories />
         <MidCta />
         <Program />
+        <Deliverables />
+        <NarrowDown />
+        <Price />
       </main>
       <SiteFooter />
       <PageEffects />
