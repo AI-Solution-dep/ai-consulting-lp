@@ -11,7 +11,7 @@ export default function SiteFooter() {
           </div>
           <dl className="site-footer__info">
             <div><dt>会社名</dt><dd>株式会社JQIT</dd></div>
-            <div><dt>代表者</dt><dd>代表取締役社長 山田 周作</dd></div>
+            <div><dt>代表者</dt><dd>代表取締役　山田　周作</dd></div>
             <div><dt>所在地</dt><dd>〒150-0002 東京都渋谷区渋谷1-12-2<br />クロスオフィス渋谷609</dd></div>
             <div><dt>電話</dt><dd><a href="tel:0364335383">03-6433-5383</a></dd></div>
             <div><dt>事業</dt><dd>ITソリューション / AIソリューション</dd></div>
