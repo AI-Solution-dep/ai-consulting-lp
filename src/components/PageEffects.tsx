@@ -70,6 +70,7 @@ export default function PageEffects() {
 
   // JS③ スクロール連動カラートランジション（index.html L741-768 と同一ロジック）
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const stops: Array<[number, [number, number, number]]> = [
       [0.0, [250, 248, 245]], // --paper #FAF8F5
       [0.45, [246, 239, 228]], // 中間の温かい紙色
