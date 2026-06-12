@@ -341,11 +341,6 @@
 .editorial-lp .hero-title__line {
   white-space: nowrap;
 }
-/* 見出しをフレーズ単位で折り返す（語中改行・横はみ出し防止） */
-.editorial-lp .hero-title__seg {
-  display: inline-block;
-  white-space: nowrap;
-}
 
 .editorial-lp .hero-title__answer {
   font-family: var(--font-sans-jp);
